@@ -9,9 +9,10 @@ function App() {
 
     const [notes, setNotes] = useState([]);
 
-    function createNotes(noteItem) {
+    function createNotes(noteItem, index) {
         return <Note 
-            key={noteItem.Key}
+            key={index}
+            id={index}
             title={noteItem.title}
             content={noteItem.content}
             onDelete={deleteNote}
