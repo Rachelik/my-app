@@ -29,10 +29,10 @@ function App() {
         
     function deleteNote(id) {
         setNotes(prevNotes => {
-            prevNotes.filter((noteItem, index) => {
+            return prevNotes.filter((noteItem, index) => {
                 return index !== id;
-            })
-        })
+            });
+        });
     }
 
 
